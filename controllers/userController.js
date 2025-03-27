@@ -103,6 +103,8 @@ const addExpense = async (req, res) => {
         // Check if a file was uploaded
         const imageFile = req.file ? req.file.path : null;
 
+
+
         // Find the project by name
         const project = await Projects.findOne({ projectName });
         if (!project) {
@@ -195,6 +197,8 @@ const ExpenseUpdatation = async (req, res) => {
         const { expenseId, amount, entryDate, paymentMethod } = req.body;
         const imageFile = req.file ? req.file.path : null;
 
+
+        
 
         // Upload image to Cloudinary if a file was uploaded
         let imageUrl = null;
